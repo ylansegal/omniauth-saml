@@ -33,7 +33,7 @@ module OmniAuth
         response.settings = Onelogin::Saml::Settings.new(options)
 
         @name_id = response.name_id
-        @attributes = response.attributes
+        @attributes = response.attributes.merge('session_index' => response.sessionindex)
 
         if @name_id.nil? || @name_id.empty?
           raise OmniAuth::Strategies::SAML::ValidationError.new("SAML response missing 'name_id'")

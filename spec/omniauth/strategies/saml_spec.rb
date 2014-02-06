@@ -79,7 +79,8 @@ describe OmniAuth::Strategies::SAML, :type => :strategy do
           'first_name'   => 'Rajiv',
           'last_name'    => 'Manglani',
           'email'        => 'user@example.com',
-          'company_name' => 'Example Company'
+          'company_name' => 'Example Company',
+          'session_index' => '_17c45b5f1bb209798b06536ab9594723aa80634c58',
         }
       end
     end
